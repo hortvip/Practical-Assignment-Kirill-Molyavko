@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
+    background: #121212; 
+    color: #d1c9b8; 
+    line-height: 1.6;
+    padding: 2rem 1rem;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+header h1 {
+    font-size: 2.2rem;
+    color: #d4af37; 
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.8); 
+}
+
+.subtitle {
+    color: #9a9a9a;
+    font-size: 1rem;
+}
+
+.biome-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(380px, 1fr)); 
+    gap: 1.5rem;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.biome-card {
+    background: #1c1a17; 
+    border: 1px solid #3d3528; 
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.biome-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem 1.25rem;
+    background: #26221d; 
+    border-bottom: 1px solid #3d3528;
+}
+
+.biome-icon {
+    font-size: 1.6rem;
+}
+
+.biome-header h2 {
+    font-size: 1.25rem;
+    color: #f0e6d2;
+    font-weight: 600;
+}
+
+.weapon-list {
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.weapon-item {
+    padding: 1rem;
+    background: #141210; 
+    border-radius: 8px;
+    border-left: 3px solid #4a3f30; 
+}
+
+.weapon-item.best {
+    border-left-color: #d4af37;
+    background: #1e1a12;
+}
+
+
+.weapon-row {
+    display: flex;
+    align-items: flex-start; 
+    gap: 15px;
+    width: 100%;
+}
+
+.weapon-img {
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+    flex-shrink: 0; 
+}
+
+.weapon-info {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; 
+    min-width: 0; 
+}
+
+.weapon-name {
+    font-weight: 700;
+    color: #f5f0e1;
+    font-size: 1.05rem;
+    margin-bottom: 0.2rem;
+}
+
+.weapon-item.best .weapon-name {
+    color: #f0d060;
+}
+
+.weapon-type {
+    font-size: 0.75rem;
+    color: #8a8a9a;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.4rem;
+}
+
+.weapon-reason {
+    font-size: 0.9rem;
+    color: #b0b0b8;
+    line-height: 1.4;
+}
+
+
+@media (max-width: 500px) {
+    .biome-grid {
+        grid-template-columns: 1fr;
+    }
+    header h1 {
+        font-size: 1.5rem;
+    }
+}
